@@ -1,8 +1,0 @@
----
-title: "Computer Vision Papers"
----
-
-여기는 **Computer Vision** 분야 논문 정리 페이지입니다.
-
-- [ResNet: Deep Residual Learning for Image Recognition](2025-08-08-resnet.qmd)
-- [Vision Transformer (ViT)](2025-08-08-vit.qmd)
