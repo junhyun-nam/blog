@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/2025-08-08-first-post.html",
+    "href": "posts/2025-08-08-first-post.html",
+    "title": "My First Paper Summary",
+    "section": "",
+    "text": "논문 요약 작성 예시입니다.\n\n\n\n주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
+  },
+  {
+    "objectID": "posts/2025-08-08-first-post.html#key-ideas",
+    "href": "posts/2025-08-08-first-post.html#key-ideas",
+    "title": "My First Paper Summary",
+    "section": "",
+    "text": "주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "이 블로그는 아이패드에서도 바로 편집 가능하도록\nGitHub Codespaces와 Quarto를 사용해 제작되었습니다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to ML Paper Study",
+    "section": "",
+    "text": "이 블로그는 머신러닝/딥러닝 논문을 읽고 정리한 내용을 기록합니다.\n최근 포스트: - 첫 번째 포스트"
+  }
+]
