@@ -1,0 +1,6 @@
+---
+title: "About"
+---
+
+이 블로그는 아이패드에서도 바로 편집 가능하도록  
+GitHub Codespaces와 Quarto를 사용해 제작되었습니다.
