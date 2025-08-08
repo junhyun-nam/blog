@@ -1,0 +1,15 @@
+- section: "Home"
+  contents:
+    - href: index.qmd
+      text: Blog
+    - href: about.qmd
+      text: About
+
+- section: "Categories"
+  contents:
+    - href: posts/category-cv.qmd
+      text: Computer Vision
+    - href: posts/category-nlp.qmd
+      text: NLP
+    - href: posts/category-rl.qmd
+      text: Reinforcement Learning
