@@ -31,7 +31,8 @@ $$ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1-\beta_
 
 DDPM fig2
 
-만약 위에서 정의한 diffusion process를 뒤집어서 $q(\mathbf{x}_{t-1} | \mathbf{x}_t)$에서 샘플링 할 수 있다면, Gaussian noise input $\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})로 부터 real data distribution의 data point를 생성할 수 있음.
+만약 위에서 정의한 diffusion process를 뒤집어서 $q(\mathbf{x}_{t-1} | \mathbf{x}_t)$에서 샘플링 할 수 있다면, Gaussian noise input $\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$로 부터 real data distribution의 data point를 생성할 수 있음.
+
 이러한 reverse process $q(\mathbf{x}_{t-1} | \mathbf{x}_t)$를 쉽게 estimate 할 수는 없지만, noise scale $\beta_t$가 아주 작다는 가정하에, $q(\mathbf{x}_{t-1} | \mathbf{x}_t)$는 Gaussian이고, 따라서 이를 어떤 parameterized model $p_\theta$를 이용해 근사할 수 있음.
 
 $$ p_\theta (\mathbf{x}_{0:T}) := p(\mathbf{x}_T) \prod_{t=1}^T p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t), \quad p_\theta (\mathbf{x}_{t=1} | \mathbf{x}_t) := \mathcal{N}(\mathbf{x}_{t-1}; \mathbf{\mu}_\theta (\mathbf{x}_t, t), \mathbf{\Sigma}_\theta (\mathbf{x}_t, t)) $$
