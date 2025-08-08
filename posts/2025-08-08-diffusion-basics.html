@@ -243,8 +243,15 @@ window.Quarto = {
 <h1>Denoising Diffusion Probabilistic Model</h1>
 <section id="forward-diffusion-process" class="level2">
 <h2 class="anchored" data-anchor-id="forward-diffusion-process">Forward Diffusion Process</h2>
-<p>Real data distribution으로 부터 샘플링한 data point <span class="math inline">\(\mathbf{x}_0 \sim q(\mathbf{x})\)</span>에 대해 forward diffusion process는 T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의 됨. 이에 따라 noisy sample의 sequence <span class="math inline">\(\mathbf{x}_1, \cdots, \mathbf{x}_T\)</span>가 정의 되며, 매 step 마다 더해지는 Gaussian noise의 양은 variance schedule <span class="math inline">\(\{\beta_t \in (0, 1) \}_{t=1}^T\)</span>를 따름.</p>
-<p>$$ q(<em>t | </em>{t-1}) = (<em>t; </em>{t-1}, _t )</p>
+<p>real data distribution으로 부터 샘플링한 data point <span class="math inline">\(\mathbf{x}_0 \sim q(\mathbf{x})\)</span>에 대해 forward diffusion process는 아래와 같의 정의됨</p>
+<p><span class="math display">\[ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1-\beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}), \quad q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^T q(\mathbf{x}_t | \mathbf{x}_{t-1}) \]</span></p>
+<ul>
+<li>Markov chain 임</li>
+<li>T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의</li>
+<li>이에 따라 noisy sample의 sequence <span class="math inline">\(\mathbf{x}_1, \cdots, \mathbf{x}_T\)</span>가 정의</li>
+<li>매 step 마다 더해지는 Gaussian noise의 양은 variance schedule <span class="math inline">\(\{\beta_t \in (0, 1) \}_{t=1}^T\)</span></li>
+<li>reparameterization trick을 통해 $q(_t | _0) = (_t; _0, (1- {}_t) )로 arbitrary step에 대해 바로 sampling 가능</li>
+</ul>
 </section>
 </section>
 <section id="abstract" class="level1">

@@ -25,7 +25,7 @@
     "href": "posts/2025-08-08-diffusion-basics.html#forward-diffusion-process",
     "title": "Diffusion model basics",
     "section": "Forward Diffusion Process",
-    "text": "Forward Diffusion Process\nReal data distribution으로 부터 샘플링한 data point \\(\\mathbf{x}_0 \\sim q(\\mathbf{x})\\)에 대해 forward diffusion process는 T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의 됨. 이에 따라 noisy sample의 sequence \\(\\mathbf{x}_1, \\cdots, \\mathbf{x}_T\\)가 정의 되며, 매 step 마다 더해지는 Gaussian noise의 양은 variance schedule \\(\\{\\beta_t \\in (0, 1) \\}_{t=1}^T\\)를 따름.\n$$ q(t | {t-1}) = (t; {t-1}, _t )"
+    "text": "Forward Diffusion Process\nreal data distribution으로 부터 샘플링한 data point \\(\\mathbf{x}_0 \\sim q(\\mathbf{x})\\)에 대해 forward diffusion process는 아래와 같의 정의됨\n\\[ q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) = \\mathcal{N}(\\mathbf{x}_t; \\sqrt{1-\\beta_t} \\mathbf{x}_{t-1}, \\beta_t \\mathbf{I}), \\quad q(\\mathbf{x}_{1:T} | \\mathbf{x}_0) = \\prod_{t=1}^T q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) \\]\n\nMarkov chain 임\nT step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의\n이에 따라 noisy sample의 sequence \\(\\mathbf{x}_1, \\cdots, \\mathbf{x}_T\\)가 정의\n매 step 마다 더해지는 Gaussian noise의 양은 variance schedule \\(\\{\\beta_t \\in (0, 1) \\}_{t=1}^T\\)\nreparameterization trick을 통해 $q(_t | _0) = (_t; _0, (1- {}_t) )로 arbitrary step에 대해 바로 sampling 가능"
   },
   {
     "objectID": "posts/2025-08-08-diffusion-basics.html#key-ideas",
