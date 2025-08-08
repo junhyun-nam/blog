@@ -10,6 +10,11 @@ website:
     search: true
     contents: sidebar.yml
   navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
     right:
       - icon: github
         href: https://github.com/junhyun-nam/blog
