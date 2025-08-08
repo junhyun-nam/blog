@@ -3,6 +3,13 @@ title: "Diffusion model basics"
 date: 2025-08-08
 ---
 
+# Introduction
+
+Diffusion model의 시초는 Sohl-Dickstein의 [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585), ICML 2015.
+이후 Yang Song의 Score matching 논문 ([Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600), NeurIPS 2019 Oral)과 Jonathan Ho의 DDPM ([Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239), NeurIPS 2020) 부터 그 당시 SOTA 였던 GAN과 comparable한 성능을 보여주기 시작하면서 가능성을 주목받기 시작함.
+
+
+
 # Abstract
 논문 요약 작성 예시입니다.
 
