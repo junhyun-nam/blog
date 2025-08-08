@@ -1,0 +1,23 @@
+---
+title: "My First Paper Summary"
+date: 2025-08-08
+---
+
+# Abstract
+논문 요약 작성 예시입니다.
+
+## Key Ideas
+- 주요 기여점
+- 기술적 접근
+- 실험 결과
+
+수식 예시:
+
+$$
+\mathcal{L} = \sum_i (y_i - \hat{y}_i)^2
+$$
+
+```python
+# 예시 코드 블록
+import torch
+print(torch.__version__)
