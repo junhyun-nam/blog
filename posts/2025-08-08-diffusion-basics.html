@@ -258,7 +258,8 @@ window.Quarto = {
 <section id="reverse-diffusion-process" class="level2">
 <h2 class="anchored" data-anchor-id="reverse-diffusion-process">Reverse Diffusion Process</h2>
 <p>DDPM fig2</p>
-<p>만약 위에서 정의한 diffusion process를 뒤집어서 <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>에서 샘플링 할 수 있다면, Gaussian noise input $_T (, )로 부터 real data distribution의 data point를 생성할 수 있음. 이러한 reverse process <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>를 쉽게 estimate 할 수는 없지만, noise scale <span class="math inline">\(\beta_t\)</span>가 아주 작다는 가정하에, <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>는 Gaussian이고, 따라서 이를 어떤 parameterized model <span class="math inline">\(p_\theta\)</span>를 이용해 근사할 수 있음.</p>
+<p>만약 위에서 정의한 diffusion process를 뒤집어서 <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>에서 샘플링 할 수 있다면, Gaussian noise input <span class="math inline">\(\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})\)</span>로 부터 real data distribution의 data point를 생성할 수 있음.</p>
+<p>이러한 reverse process <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>를 쉽게 estimate 할 수는 없지만, noise scale <span class="math inline">\(\beta_t\)</span>가 아주 작다는 가정하에, <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>는 Gaussian이고, 따라서 이를 어떤 parameterized model <span class="math inline">\(p_\theta\)</span>를 이용해 근사할 수 있음.</p>
 <p><span class="math display">\[ p_\theta (\mathbf{x}_{0:T}) := p(\mathbf{x}_T) \prod_{t=1}^T p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t), \quad p_\theta (\mathbf{x}_{t=1} | \mathbf{x}_t) := \mathcal{N}(\mathbf{x}_{t-1}; \mathbf{\mu}_\theta (\mathbf{x}_t, t), \mathbf{\Sigma}_\theta (\mathbf{x}_t, t)) \]</span></p>
 </section>
 <section id="training-objective" class="level2">
