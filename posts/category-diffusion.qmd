@@ -4,4 +4,4 @@ title: "Diffusion Models"
 
 여기는 **Diffusion Models** 분야 논문 정리 페이지입니다.
 
-- [Fundamentals](2025-08-08-diffusion-fundamentals.qmd)
+- [Basics](2025-08-08-diffusion-basics.qmd)
