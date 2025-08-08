@@ -18,14 +18,14 @@
     "href": "posts/2025-08-08-diffusion-basics.html",
     "title": "Diffusion model basics",
     "section": "",
-    "text": "논문 요약 작성 예시입니다.\n\n\n\n주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
+    "text": "Diffusion model의 시초는 Sohl-Dickstein의 Deep Unsupervised Learning using Nonequilibrium Thermodynamics, ICML 2015. 이후 Yang Song의 Score matching 논문 (Generative Modeling by Estimating Gradients of the Data Distribution, NeurIPS 2019 Oral)과 Jonathan Ho의 DDPM (Denoising Diffusion Probabilistic Models, NeurIPS 2020) 부터 그 당시 SOTA 였던 GAN과 comparable한 성능을 보여주기 시작하면서 가능성을 주목받기 시작함."
   },
   {
     "objectID": "posts/2025-08-08-diffusion-basics.html#key-ideas",
     "href": "posts/2025-08-08-diffusion-basics.html#key-ideas",
     "title": "Diffusion model basics",
-    "section": "",
-    "text": "주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
+    "section": "Key Ideas",
+    "text": "Key Ideas\n\n주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
   },
   {
     "objectID": "about.html",
