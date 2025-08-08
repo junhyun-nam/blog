@@ -5,9 +5,17 @@ date: 2025-08-08
 
 # Introduction
 
-Diffusion model의 시초는 Sohl-Dickstein의 [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585), ICML 2015.
-이후 Yang Song의 Score matching 논문 ([Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600), NeurIPS 2019 Oral)과 Jonathan Ho의 DDPM ([Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239), NeurIPS 2020) 부터 그 당시 SOTA 였던 GAN과 comparable한 성능을 보여주기 시작하면서 가능성을 주목받기 시작함.
+Diffusion model의 시초는 Sohl-Dickstein의 diffusion probablistic model ([Sohl-Dickstein et al., 2015](https://arxiv.org/abs/1503.03585)).
 
+이후 Yang Song의 noise-conditioned score network (*NCSN*, a.k.a., *score matching*; [Yang & Ermon, 2019](https://arxiv.org/abs/1907.05600))과 Jonathan Ho의 denoising diffusion probabilistic model (*DDPM*; [Ho et al., 2020](https://arxiv.org/abs/2006.11239)) 부터 그 당시 SOTA 였던 GAN과 comparable한 성능을 보여주기 시작하면서 가능성을 주목받기 시작함.
+
+기본적으로 GAN이나 flow-based model이 그렇듯, 어떤 tractable distribution (e.g., Gaussian)과 data distribution 간의 mapping을 잘 모델링 해서, tractable distribution으로 부터 sampling한 $z$로 부터 data distribution의 $x$를 생성하는 것이 목표임.
+
+Diffusion model은 이러한 mapping을 data distribution의 $x$에 아주 작은 양의 Gaussian noise를 계속 더해서 $x$와 같은 dimension을 가지는 Gaussian random variable로 mapping 하고, 이러한 과정을 역으로 mapping 할 수 있는 function을 학습을 해서 $z$로 부터 $x$를 생성함
+
+# Denoising Diffusion PRobabilistic Model
+
+## Forward Diffusion Process
 
 
 # Abstract
