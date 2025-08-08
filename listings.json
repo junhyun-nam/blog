@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/category-diffusion.html",
       "/posts/2025-08-08-first-post.html"
     ]
   }
