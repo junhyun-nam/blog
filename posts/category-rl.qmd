@@ -1,0 +1,8 @@
+---
+title: "Reinforcement Learning Papers"
+---
+
+여기는 **Reinforcement Learning** 분야 논문 정리 페이지입니다.
+
+- [DQN: Playing Atari with Deep Reinforcement Learning](2025-08-08-dqn.qmd)
+- [PPO: Proximal Policy Optimization Algorithms](2025-08-08-ppo.qmd)
