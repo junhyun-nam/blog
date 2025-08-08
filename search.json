@@ -14,11 +14,18 @@
     "text": "주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Personal ML Paper Study",
+    "objectID": "posts/2025-08-08-diffusion-basics.html",
+    "href": "posts/2025-08-08-diffusion-basics.html",
+    "title": "Diffusion model basics",
     "section": "",
-    "text": "Diffusion Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
+    "text": "논문 요약 작성 예시입니다.\n\n\n\n주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
+  },
+  {
+    "objectID": "posts/2025-08-08-diffusion-basics.html#key-ideas",
+    "href": "posts/2025-08-08-diffusion-basics.html#key-ideas",
+    "title": "Diffusion model basics",
+    "section": "",
+    "text": "주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
   },
   {
     "objectID": "about.html",
@@ -26,6 +33,13 @@
     "title": "About",
     "section": "",
     "text": "이 블로그는 아이패드에서도 바로 편집 가능하도록\nGitHub Codespaces와 Quarto를 사용해 제작되었습니다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Personal ML Paper Study",
+    "section": "",
+    "text": "Diffusion Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiffusion model basics\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/category-diffusion.html",
