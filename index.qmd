@@ -1,5 +1,5 @@
 ---
-title: "Welcome to ML Paper Study"
+title: "Personal ML Paper Study"
 listing:
   contents: posts
   type: default
