@@ -7,9 +7,5 @@
 
 - section: "Categories"
   contents:
-    - href: posts/category-cv.qmd
-      text: Computer Vision
-    - href: posts/category-nlp.qmd
-      text: NLP
-    - href: posts/category-rl.qmd
-      text: Reinforcement Learning
+    - href: posts/category-diffusion.qmd
+      text: Diffusion Models
