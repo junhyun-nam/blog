@@ -3,10 +3,10 @@ project:
   output-dir: _output
 
 website:
-  title: "Experimental blog posts"
+  title: "Personal Study"
   description: "Machine Learning Paper Summaries and Notes"
   sidebar:
-    style: floating
+    style: docked
     search: true
     contents: sidebar.yml
   navbar:
