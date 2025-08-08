@@ -1,25 +1,8 @@
 ---
-title: "Poetry"
-subtitle: "Build and publish your first Python package"
-author: "Collegica"
-format:
-  revealjs: 
-    theme: dark
-    slide-number: true
-    chalkboard: 
-      buttons: false
-    preview-links: auto
-    footer: <https://collegi.ca>
-editor: visual
+title: "Welcome to ML Paper Study"
 ---
 
-## Quarto
+이 블로그는 머신러닝/딥러닝 논문을 읽고 정리한 내용을 기록합니다.
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
-
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
+최근 포스트:
+- [첫 번째 포스트](posts/2025-08-08-first-post.qmd)
