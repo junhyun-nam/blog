@@ -1,4 +1,0 @@
-- section: "Categories"
-  contents:
-    - href: posts/category-diffusion.qmd
-      text: Diffusion Models
