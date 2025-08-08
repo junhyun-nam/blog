@@ -17,9 +17,17 @@ Diffusion model은 이러한 mapping을 data distribution의 $x$에 아주 작�
 
 ## Forward Diffusion Process
 
-Real data distribution으로 부터 샘플링한 data point $\mathbf{x}_0 \sim q(\mathbf{x})$에 대해 forward diffusion process는 T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의 됨. 이에 따라 noisy sample의 sequence $\mathbf{x}_1, \cdots, \mathbf{x}_T$가 정의 되며, 매 step 마다 더해지는 Gaussian noise의 양은 variance schedule $\{\beta_t \in (0, 1) \}_{t=1}^T$를 따름.
+real data distribution으로 부터 샘플링한 data point $\mathbf{x}_0 \sim q(\mathbf{x})$에 대해 forward diffusion process는 아래와 같의 정의됨
 
-$$ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1-\beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})
+$$ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1-\beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}), \quad q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^T q(\mathbf{x}_t | \mathbf{x}_{t-1}) $$
+
+* Markov chain 임
+* T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의
+* 이에 따라 noisy sample의 sequence $\mathbf{x}_1, \cdots, \mathbf{x}_T$가 정의
+* 매 step 마다 더해지는 Gaussian noise의 양은 variance schedule $\{\beta_t \in (0, 1) \}_{t=1}^T$
+* reparameterization trick을 통해 $q(\mathbf{x}_t | \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1- \bar{\alpha}_t) \mathbf{I})로 arbitrary step에 대해 바로 sampling 가능
+
+
 
 
 # Abstract
