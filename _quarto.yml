@@ -1,2 +1,24 @@
 project:
-  output-dir: _output
+  type: website
+
+website:
+  title: "Experimental blog posts"
+  description: "Machine Learning Paper Summaries and Notes"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/junhyun-nam/blog
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+execute:
+  freeze: auto
