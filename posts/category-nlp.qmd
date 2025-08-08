@@ -1,8 +1,0 @@
----
-title: "Natural Language Processing Papers"
----
-
-여기는 **NLP** 분야 논문 정리 페이지입니다.
-
-- [BERT: Pre-training of Deep Bidirectional Transformers](2025-08-08-bert.qmd)
-- [GPT: Generative Pre-trained Transformer](2025-08-08-gpt.qmd)
