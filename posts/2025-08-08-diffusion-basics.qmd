@@ -13,7 +13,7 @@ Diffusion model의 시초는 Sohl-Dickstein의 diffusion probablistic model ([So
 
 Diffusion model은 이러한 mapping을 data distribution의 $x$에 아주 작은 양의 Gaussian noise를 계속 더해서 $x$와 같은 dimension을 가지는 Gaussian random variable로 mapping 하고, 이러한 과정을 역으로 mapping 할 수 있는 function을 학습을 해서 $z$로 부터 $x$를 생성함
 
-# Denoising Diffusion PRobabilistic Model
+# Denoising Diffusion Probabilistic Model
 
 ## Forward Diffusion Process
 
