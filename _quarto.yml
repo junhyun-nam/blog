@@ -8,11 +8,7 @@ website:
   sidebar:
     style: docked
     search: true
-    contents:
-      - section: "Topics"
-        contents:
-          - href: posts/category-diffusion.qmd
-            text: Diffusion models
+    contents: sidebar.yml
   navbar:
     left:
       - href: index.qmd
