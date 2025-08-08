@@ -14,11 +14,11 @@
     "text": "주요 기여점\n기술적 접근\n실험 결과\n\n수식 예시:\n\\[\n\\mathcal{L} = \\sum_i (y_i - \\hat{y}_i)^2\n\\]\n```python # 예시 코드 블록 import torch print(torch.__version__)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to ML Paper Study",
+    "objectID": "posts/category-nlp.html",
+    "href": "posts/category-nlp.html",
+    "title": "Natural Language Processing Papers",
     "section": "",
-    "text": "Computer Vision Papers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
+    "text": "여기는 NLP 분야 논문 정리 페이지입니다.\n\nBERT: Pre-training of Deep Bidirectional Transformers\nGPT: Generative Pre-trained Transformer"
   },
   {
     "objectID": "about.html",
@@ -26,6 +26,13 @@
     "title": "About",
     "section": "",
     "text": "이 블로그는 아이패드에서도 바로 편집 가능하도록\nGitHub Codespaces와 Quarto를 사용해 제작되었습니다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to ML Paper Study",
+    "section": "",
+    "text": "Natural Language Processing Papers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Vision Papers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/category-cv.html",
