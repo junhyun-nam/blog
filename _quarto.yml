@@ -6,7 +6,7 @@ website:
   title: "Experimental blog posts"
   description: "Machine Learning Paper Summaries and Notes"
   sidebar:
-    style: "floating"
+    style: floating
     search: true
     contents: sidebar.yml
   navbar:
