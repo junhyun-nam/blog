@@ -196,6 +196,8 @@ window.Quarto = {
   <li><a href="#denoising-diffusion-probabilistic-model" id="toc-denoising-diffusion-probabilistic-model" class="nav-link" data-scroll-target="#denoising-diffusion-probabilistic-model">Denoising Diffusion Probabilistic Model</a>
   <ul class="collapse">
   <li><a href="#forward-diffusion-process" id="toc-forward-diffusion-process" class="nav-link" data-scroll-target="#forward-diffusion-process">Forward Diffusion Process</a></li>
+  <li><a href="#reverse-diffusion-process" id="toc-reverse-diffusion-process" class="nav-link" data-scroll-target="#reverse-diffusion-process">Reverse Diffusion Process</a></li>
+  <li><a href="#training-objective" id="toc-training-objective" class="nav-link" data-scroll-target="#training-objective">Training objective</a></li>
   </ul></li>
   <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a>
   <ul class="collapse">
@@ -246,12 +248,21 @@ window.Quarto = {
 <p>real data distribution으로 부터 샘플링한 data point <span class="math inline">\(\mathbf{x}_0 \sim q(\mathbf{x})\)</span>에 대해 forward diffusion process는 아래와 같의 정의됨</p>
 <p><span class="math display">\[ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1-\beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}), \quad q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^T q(\mathbf{x}_t | \mathbf{x}_{t-1}) \]</span></p>
 <ul>
-<li>Markov chain 임</li>
+<li>Markov chain</li>
 <li>T step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의</li>
+<li>variance schedule <span class="math inline">\(\{\beta_t \in (0, 1) \}_{t=1}^T\)</span>에 따라 매 step 마다 Gaussian noise를 더함</li>
 <li>이에 따라 noisy sample의 sequence <span class="math inline">\(\mathbf{x}_1, \cdots, \mathbf{x}_T\)</span>가 정의</li>
-<li>매 step 마다 더해지는 Gaussian noise의 양은 variance schedule <span class="math inline">\(\{\beta_t \in (0, 1) \}_{t=1}^T\)</span></li>
-<li>reparameterization trick을 통해 $q(_t | _0) = (_t; _0, (1- {}_t) )로 arbitrary step에 대해 바로 sampling 가능</li>
+<li>reparameterization trick을 통해 <span class="math inline">\(q(\mathbf{x}_t | \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1- \bar{\alpha}_t) \mathbf{I})\)</span>로 arbitrary step에 대해 바로 sampling 가능</li>
 </ul>
+</section>
+<section id="reverse-diffusion-process" class="level2">
+<h2 class="anchored" data-anchor-id="reverse-diffusion-process">Reverse Diffusion Process</h2>
+<p>DDPM fig2</p>
+<p>만약 위에서 정의한 diffusion process를 뒤집어서 <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>에서 샘플링 할 수 있다면, Gaussian noise input $_T (, )로 부터 real data distribution의 data point를 생성할 수 있음. 이러한 reverse process <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>를 쉽게 estimate 할 수는 없지만, noise scale <span class="math inline">\(\beta_t\)</span>가 아주 작다는 가정하에, <span class="math inline">\(q(\mathbf{x}_{t-1} | \mathbf{x}_t)\)</span>는 Gaussian이고, 따라서 이를 어떤 parameterized model <span class="math inline">\(p_\theta\)</span>를 이용해 근사할 수 있음.</p>
+<p><span class="math display">\[ p_\theta (\mathbf{x}_{0:T}) := p(\mathbf{x}_T) \prod_{t=1}^T p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t), \quad p_\theta (\mathbf{x}_{t=1} | \mathbf{x}_t) := \mathcal{N}(\mathbf{x}_{t-1}; \mathbf{\mu}_\theta (\mathbf{x}_t, t), \mathbf{\Sigma}_\theta (\mathbf{x}_t, t)) \]</span></p>
+</section>
+<section id="training-objective" class="level2">
+<h2 class="anchored" data-anchor-id="training-objective">Training objective</h2>
 </section>
 </section>
 <section id="abstract" class="level1">

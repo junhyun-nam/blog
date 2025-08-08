@@ -25,7 +25,21 @@
     "href": "posts/2025-08-08-diffusion-basics.html#forward-diffusion-process",
     "title": "Diffusion model basics",
     "section": "Forward Diffusion Process",
-    "text": "Forward Diffusion Process\nreal data distribution으로 부터 샘플링한 data point \\(\\mathbf{x}_0 \\sim q(\\mathbf{x})\\)에 대해 forward diffusion process는 아래와 같의 정의됨\n\\[ q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) = \\mathcal{N}(\\mathbf{x}_t; \\sqrt{1-\\beta_t} \\mathbf{x}_{t-1}, \\beta_t \\mathbf{I}), \\quad q(\\mathbf{x}_{1:T} | \\mathbf{x}_0) = \\prod_{t=1}^T q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) \\]\n\nMarkov chain 임\nT step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의\n이에 따라 noisy sample의 sequence \\(\\mathbf{x}_1, \\cdots, \\mathbf{x}_T\\)가 정의\n매 step 마다 더해지는 Gaussian noise의 양은 variance schedule \\(\\{\\beta_t \\in (0, 1) \\}_{t=1}^T\\)\nreparameterization trick을 통해 $q(_t | _0) = (_t; _0, (1- {}_t) )로 arbitrary step에 대해 바로 sampling 가능"
+    "text": "Forward Diffusion Process\nreal data distribution으로 부터 샘플링한 data point \\(\\mathbf{x}_0 \\sim q(\\mathbf{x})\\)에 대해 forward diffusion process는 아래와 같의 정의됨\n\\[ q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) = \\mathcal{N}(\\mathbf{x}_t; \\sqrt{1-\\beta_t} \\mathbf{x}_{t-1}, \\beta_t \\mathbf{I}), \\quad q(\\mathbf{x}_{1:T} | \\mathbf{x}_0) = \\prod_{t=1}^T q(\\mathbf{x}_t | \\mathbf{x}_{t-1}) \\]\n\nMarkov chain\nT step 동안 작은 양의 Gaussian noise를 더하는 것으로 정의\nvariance schedule \\(\\{\\beta_t \\in (0, 1) \\}_{t=1}^T\\)에 따라 매 step 마다 Gaussian noise를 더함\n이에 따라 noisy sample의 sequence \\(\\mathbf{x}_1, \\cdots, \\mathbf{x}_T\\)가 정의\nreparameterization trick을 통해 \\(q(\\mathbf{x}_t | \\mathbf{x}_0) = \\mathcal{N}(\\mathbf{x}_t; \\sqrt{\\bar{\\alpha}_t} \\mathbf{x}_0, (1- \\bar{\\alpha}_t) \\mathbf{I})\\)로 arbitrary step에 대해 바로 sampling 가능"
+  },
+  {
+    "objectID": "posts/2025-08-08-diffusion-basics.html#reverse-diffusion-process",
+    "href": "posts/2025-08-08-diffusion-basics.html#reverse-diffusion-process",
+    "title": "Diffusion model basics",
+    "section": "Reverse Diffusion Process",
+    "text": "Reverse Diffusion Process\nDDPM fig2\n만약 위에서 정의한 diffusion process를 뒤집어서 \\(q(\\mathbf{x}_{t-1} | \\mathbf{x}_t)\\)에서 샘플링 할 수 있다면, Gaussian noise input $_T (, )로 부터 real data distribution의 data point를 생성할 수 있음. 이러한 reverse process \\(q(\\mathbf{x}_{t-1} | \\mathbf{x}_t)\\)를 쉽게 estimate 할 수는 없지만, noise scale \\(\\beta_t\\)가 아주 작다는 가정하에, \\(q(\\mathbf{x}_{t-1} | \\mathbf{x}_t)\\)는 Gaussian이고, 따라서 이를 어떤 parameterized model \\(p_\\theta\\)를 이용해 근사할 수 있음.\n\\[ p_\\theta (\\mathbf{x}_{0:T}) := p(\\mathbf{x}_T) \\prod_{t=1}^T p_\\theta (\\mathbf{x}_{t-1} | \\mathbf{x}_t), \\quad p_\\theta (\\mathbf{x}_{t=1} | \\mathbf{x}_t) := \\mathcal{N}(\\mathbf{x}_{t-1}; \\mathbf{\\mu}_\\theta (\\mathbf{x}_t, t), \\mathbf{\\Sigma}_\\theta (\\mathbf{x}_t, t)) \\]"
+  },
+  {
+    "objectID": "posts/2025-08-08-diffusion-basics.html#training-objective",
+    "href": "posts/2025-08-08-diffusion-basics.html#training-objective",
+    "title": "Diffusion model basics",
+    "section": "Training objective",
+    "text": "Training objective"
   },
   {
     "objectID": "posts/2025-08-08-diffusion-basics.html#key-ideas",
