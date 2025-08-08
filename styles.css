@@ -5,3 +5,20 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
+
+/* 기본 링크 색상 */
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+/* 방문한 링크 */
+a:visited {
+  color: #1756a9;
+}
+
+/* 호버 시 */
+a:hover {
+  color: #1756a9;
+  text-decoration: underline;
+}
