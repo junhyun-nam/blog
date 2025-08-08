@@ -1,5 +1,24 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Personal ML Paper Study",
+    "section": "",
+    "text": "Diffusion Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDiffusion model basics\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/category-diffusion.html",
+    "href": "posts/category-diffusion.html",
+    "title": "Diffusion Models",
+    "section": "",
+    "text": "여기는 Diffusion Models 분야 논문 정리 페이지입니다.\n\nBasics",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Diffusion models"
+    ]
+  },
+  {
     "objectID": "posts/2025-08-08-first-post.html",
     "href": "posts/2025-08-08-first-post.html",
     "title": "My First Paper Summary",
@@ -40,24 +59,5 @@
     "title": "About",
     "section": "",
     "text": "이 블로그는 아이패드에서도 바로 편집 가능하도록\nGitHub Codespaces와 Quarto를 사용해 제작되었습니다."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Personal ML Paper Study",
-    "section": "",
-    "text": "Diffusion Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiffusion model basics\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Paper Summary\n\n\n\n\n\n\n\n\nAug 8, 2025\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/category-diffusion.html",
-    "href": "posts/category-diffusion.html",
-    "title": "Diffusion Models",
-    "section": "",
-    "text": "여기는 Diffusion Models 분야 논문 정리 페이지입니다.\n\nBasics",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Diffusion models"
-    ]
   }
 ]
